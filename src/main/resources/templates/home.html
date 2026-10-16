@@ -1,29 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title},~{::script})}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .container{
-            margin: auto;
-            width: 50%;
-            padding: 30px;
-            background: #e2e2e2;
-        }
-    </style>
+    <title>home page</title>
 </head>
 <body>
-    <div class="container">
-        <h1 data-th-text="${name}">Welcome to home page</h1>
-        <p>Youtube Channel: <span data-th-text="${youtubeChannel}"></span></p>
-        <p>GitHub Repository: <span data-th-text="${githubRepo}"></span></p>
-
-        <a th:href="${githubRepo}">Click Here to open</a>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sapiente dolores dignissimos impedit odio atque, asperiores deleniti, necessitatibus id modi officia. Eligendi iure asperiores quia minus quo ex dicta aperiam!
-
-        </p>
-
+    <div id="content">
+        <h1>welcome to home page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, officia!</p>
     </div>
+    <script>
+        console.log("home page")
+    </script>
 </body>
 </html>
